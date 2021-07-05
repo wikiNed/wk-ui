@@ -1,5 +1,5 @@
 const options = {
-    entry: 'src/index.js',
+    entry: 'src/index.ts',
     doc: {
         title: 'sd_ui',
         themeConfig: { mode: 'light' },

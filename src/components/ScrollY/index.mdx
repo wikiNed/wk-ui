@@ -7,51 +7,79 @@ sidebar: true
 import { Playground } from 'docz'
 import ScrollY from './index'
 
-# Alert警告提示组件
-#### 默认
+# ScrollY滚动组件
 
 <Playground>
-    <Alert message="温馨提示：您的小票已出，快来火车站获取吧～" />
+    <ScrollY data={[{
+        "userid": 101153,
+        "Longitude": 104.04,
+        "Latitude": 30.54,
+        "DeviceAddr": "四川省,成都市,高新区,高新区成都天府实验学校（小学部门卫室）",
+        "Contact": "梅主任",
+        "tel": "028-86056372/15108413125",
+        "name": "成都高新区成都天府实验学校1",
+        "area": "成都高新区"
+    }, {
+    "userid": 34035,
+        "Longitude": 104.038,
+        "Latitude": 30.61,
+        "Contact": "赵老师",
+        "tel": 13550260220,
+        "name": "成都市高新区贝诺尔幼儿园",
+        "area": "成都高新区"
+}, {
+    "userid": 101518,
+        "Longitude": 104.037,
+        "Latitude": 30.559,
+        "DeviceAddr": "四川省,成都市,高新区,高新区成都市霍森斯小学5楼广播室桌上",
+        "Contact": "曾霞",
+        "tel": 13880963540,
+        "name": "成都市高新区成都霍森斯小学",
+        "area": "成都高新区"
+}, {
+    "userid": 130860,
+        "Longitude": 104.037,
+        "Latitude": 30.546,
+        "DeviceAddr": "四川省,成都市,高新区,成都教科院附属学校(西区)一楼红领巾广播室",
+        "Contact": "袁",
+        "tel": 13880407520,
+        "name": "成都市高新区成都教科院附属学校(西区)",
+        "area": "成都高新区"
+}, {
+    "userid": 130896,
+        "Longitude": 104.076,
+        "Latitude": 30.596,
+        "DeviceAddr": "四川省,成都市,高新区,高新区在成都七中初中学校附近2楼教学楼广播室",
+        "Contact": "郑刚老师",
+        "tel": 15828118372,
+        "name": "成都市高新区成都七中初中学校",
+        "area": "成都高新区"
+}, {
+    "userid": 100475,
+        "Longitude": 104.05,
+        "Latitude": 30.57,
+        "DeviceAddr": "四川省成都市高新区天府一街格致楼3楼中心机房",
+        "Contact": "吴骏驰",
+        "tel": "028-84594201/13881863832",
+        "name": "成都市高新区成都七中高新校区",
+        "area": "成都高新区"
+}, {
+    "userid": 101469,
+        "Longitude": 104.047,
+        "Latitude": 30.584,
+        "DeviceAddr": "四川省,成都市,高新区,高新区成都市石室天府中学附属小学教学楼5楼顶棚墙上",
+        "Contact": "卿罗国主任",
+        "tel": 13568987029,
+        "name": "成都市高新区成都市石室中学附属小学",
+        "area": "成都高新区"
+}, {
+    "userid": 101282,
+        "Longitude": 104.039,
+        "Latitude": 30.542,
+        "DeviceAddr": "四川省,成都市,高新区,高新区成都市教育科学研究院附属学校中学部教学楼5楼弱电井",
+        "Contact": "汪晓芝主任",
+        "tel": "028-86056372",
+        "name": "成都市高新区成都市天府实验学校中学部",
+        "area": "成都高新区"
+}]} speed={30} title={['经度','纬度','地址','姓名','电话','单位','行政区划']}/>
 </Playground>
-
-#### 可关闭
-
-<Playground>
-    <Alert message="温馨提示：您的小票已出，快来火车站获取吧～" closable />
-</Playground>
-
-#### 主题类型
-
-<Playground>
-    <Alert message="出票成功：您的小票已出，快来火车站获取吧～" type="success" />
-    <Alert message="出票错误：react错误，返回首页～" type="error" />
-    <Alert message="出票通知：您的小票已出，快来火车站获取吧～～" type="info" />
-    <Alert message="温馨提示：您的小票已出，快来火车站获取吧～" />
-</Playground>
-
-#### 配置提示辅助文字
-
-<Playground>
-    <Alert message="出票通知" description="您的小票已出，快来火车站获取吧～～" type="info" />
-    <Alert message="验证成功" description="您的代码提交成功，快来火车站获取吧～～" type="success" closable />
-</Playground>
-
-## 用法
-
-``` js
-import { Alert } from '@xlab/xu_ui'
-
-// 导入
-<Alert message="验证成功" description="您的代码提交成功，快来火车站获取吧～～" type="success" closable />
-```
-
-## API文档
-|  参数  |  说明  |  类型  |  默认值  |
-|  ---   |  ---  |  ---  |  ---  |
-|  style  |  更改Alert样式  |  object  |  |
-|  closable  |  是否显示关闭按钮, 默认不显示  |  bool  |  false  |
-|  closeText  |  自定义关闭按钮  |  string|reactNode  |  'x'  |
-|  message  |  警告提示内容  |  string  |    |
-|  description  |  警告提示的辅助性文字  |  string  |    |
-|  type  |  警告的类型  |  string  |   'warning' |
-|  onClose  |  关闭时触发的事件  |  func  |    |

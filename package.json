@@ -1,19 +1,12 @@
 {
-  "name": "sd-ui",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "father build",
-    "docDev": "father doc dev",
-    "docBuild": "father doc build",
-    "deploy": "father doc deploy",
-    "test": "father test"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@material-ui/styles": "^4.11.4",
-    "father": "^2.30.6"
+    "father": "^2.30.6",
+    "babel-plugin-import": "^1.12.2"
+  },
+  "scripts": {
+    "dev": "npx --max_old_space_size=8096 father doc dev --host 0.0.0.0",
+    "build": "father build",
+    "build:doc": "father doc build",
+    "deploy": "father doc deploy"
   }
 }
